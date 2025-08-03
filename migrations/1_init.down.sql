@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS "types";
+DROP TABLE IF EXISTS "credentials";

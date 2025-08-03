@@ -1,0 +1,5 @@
+Taskfile.yml
+.env.local
+local.yml
+tests
+logfile.txt
