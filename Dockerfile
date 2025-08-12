@@ -9,8 +9,9 @@ RUN go mod download
 # Copy source code
 COPY . .
 ENV GIN_MODE=release
+ENV CGO_ENABLED=1
 # Build (static compilation recommended for containers)
-RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o main cmd/bot/main.go
+RUN GOOS=linux go build -ldflags="-s -w" -o main cmd/bot/main.go
 
 # Runtime image
 FROM alpine
