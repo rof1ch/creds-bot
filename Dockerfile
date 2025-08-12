@@ -17,7 +17,6 @@ FROM alpine
 WORKDIR /app
 
 COPY --from=builder /app/main .
-COPY .env /app
 COPY ./config/ /app/config/
 
 ENV GIN_MODE=release
