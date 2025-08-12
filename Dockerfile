@@ -20,4 +20,4 @@ COPY --from=builder /app/main .
 COPY ./config/ /app/config/
 
 ENV GIN_MODE=release
-CMD ["./main", "-config='config/local.yaml'", "-env='config/.env'"]
+CMD ["./main", "-config=/app/config/local.yaml", "-env=/app/config/.env"]
